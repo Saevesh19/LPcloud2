@@ -1,17 +1,27 @@
 def linear_search(arr, target):
     for i in range(len(arr)):
         if arr[i] == target:
-            return i  # return index if found
-    return -1  # return -1 if not found
+            return i
+    return -1
 
 
-# Example usage
-numbers = [10, 20, 30, 40, 50]
-target = 30
+# Taking input from user
+n = int(input("Enter number of elements: "))
 
-result = linear_search(numbers, target)
+arr = []
 
+print("Enter elements:")
+for i in range(n):
+    element = int(input())
+    arr.append(element)
+
+target = int(input("Enter element to search: "))
+
+# Function call
+result = linear_search(arr, target)
+
+# Display result
 if result != -1:
-    print(f"Element found at index {result}")
+    print("Element found at index", result)
 else:
     print("Element not found")
